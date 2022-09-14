@@ -2,7 +2,6 @@ public class Hufflepuff extends Hogwarts {
     private String hardWork;
     private String loyalty;
     private String honesty;
-
     public Hufflepuff(String name,int doMagic,
                       int distanceOfTransgression,
                       String hardWork,

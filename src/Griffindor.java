@@ -2,7 +2,6 @@ public class Griffindor extends Hogwarts {
     private String nobility;
     private String honor;
     private String bravery;
-
     public Griffindor(String name,
                       int doMagic,
                       int distanceOfTransgression,

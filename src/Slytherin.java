@@ -13,7 +13,6 @@ public class Slytherin  extends Hogwarts{
         this.resourcefulness = resourcefulness;
         this.thirstForPower = thirstForPower;
     }
-
     public String getTrick() {
         return trick;
     }
