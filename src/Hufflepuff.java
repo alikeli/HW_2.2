@@ -1,39 +1,57 @@
 public class Hufflepuff extends Hogwarts {
-    private String hardWork;
-    private String loyalty;
-    private String honesty;
+    private int hardWork;
+    private int loyalty;
+    private int honesty;
     public Hufflepuff(String name,int doMagic,
                       int distanceOfTransgression,
-                      String hardWork,
-                      String loyalty,
-                      String honesty) {
+                      int hardWork,
+                      int loyalty,
+                      int honesty) {
         super(name, doMagic, distanceOfTransgression);
+        if (hardWork < 0 || hardWork > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.hardWork = hardWork;
+        if (loyalty < 0 || loyalty > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.loyalty = loyalty;
+        if (honesty < 0 || honesty > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.honesty = honesty;
     }
 
-    public String getHardWork() {
+    public int getHardWork() {
         return hardWork;
     }
 
-    public void setHardWork(String hardWork) {
+    public void setHardWork(int hardWork) {
         this.hardWork = hardWork;
     }
 
-    public String getLoyalty() {
+    public int getLoyalty() {
         return loyalty;
     }
 
-    public void setLoyalty(String loyalty) {
+    public void setLoyalty(int loyalty) {
         this.loyalty = loyalty;
     }
 
-    public String getHonesty() {
+    public int getHonesty() {
         return honesty;
     }
 
-    public void setHonesty(String honesty) {
+    public void setHonesty(int honesty) {
         this.honesty = honesty;
+    }
+
+    @Override
+    public String toString() {
+        return "Hufflepuff{" +
+                "hardWork=" + hardWork +
+                ", loyalty=" + loyalty +
+                ", honesty=" + honesty +
+                "} " + super.toString();
     }
 }

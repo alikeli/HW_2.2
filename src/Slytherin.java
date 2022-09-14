@@ -1,11 +1,18 @@
 public class Slytherin  extends Hogwarts{
-    private String trick;
-    private String determination;
-    private String ambition;
-    private String resourcefulness;
-    private String thirstForPower;
+    private int trick;
+    private int determination;
+    private int ambition;
+    private int resourcefulness;
+    private int thirstForPower;
 
-    public Slytherin(String name,int doMagic, int distanceOfTransgression, String trick, String determination, String ambition, String resourcefulness, String thirstForPower) {
+    public Slytherin(String name,
+                     int doMagic,
+                     int distanceOfTransgression,
+                     int trick,
+                     int determination,
+                     int ambition,
+                     int resourcefulness,
+                     int thirstForPower) {
         super(name,doMagic, distanceOfTransgression);
         this.trick = trick;
         this.determination = determination;
@@ -13,43 +20,54 @@ public class Slytherin  extends Hogwarts{
         this.resourcefulness = resourcefulness;
         this.thirstForPower = thirstForPower;
     }
-    public String getTrick() {
+    public int getTrick() {
         return trick;
     }
 
-    public void setTrick(String trick) {
+    public void setTrick(int trick) {
         this.trick = trick;
     }
 
-    public String getDetermination() {
+    public int getDetermination() {
         return determination;
     }
 
-    public void setDetermination(String determination) {
+    public void setDetermination(int determination) {
         this.determination = determination;
     }
 
-    public String getAmbition() {
+    public int getAmbition() {
         return ambition;
     }
 
-    public void setAmbition(String ambition) {
+    public void setAmbition(int ambition) {
         this.ambition = ambition;
     }
 
-    public String getResourcefulness() {
+    public int getResourcefulness() {
         return resourcefulness;
     }
 
-    public void setResourcefulness(String resourcefulness) {
+    public void setResourcefulness(int resourcefulness) {
         this.resourcefulness = resourcefulness;
     }
 
-    public String getThirstForPower() {
+    public int getThirstForPower() {
         return thirstForPower;
     }
 
-    public void setThirstForPower(String thirstForPower) {
+    public void setThirstForPower(int thirstForPower) {
         this.thirstForPower = thirstForPower;
+    }
+
+    @Override
+    public String toString() {
+        return "Slytherin{" +
+                "trick=" + trick +
+                ", determination=" + determination +
+                ", ambition=" + ambition +
+                ", resourcefulness=" + resourcefulness +
+                ", thirstForPower=" + thirstForPower +
+                "} " + super.toString();
     }
 }

@@ -1,12 +1,16 @@
 public class Hogwarts {
-    String name;
+    private String name;
     private int doMagic;
     private int distanceOfTransgression;
     public Hogwarts(String name, int doMagic, int distanceOfTransgression) {
         this.name = name;
-        if (doMagic < 0 || doMagic >100) throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        if (doMagic < 0 || doMagic > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.doMagic = doMagic;
-        if (distanceOfTransgression < 0 || distanceOfTransgression >100) throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        if (distanceOfTransgression < 0 || distanceOfTransgression > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.distanceOfTransgression = distanceOfTransgression;
     }
 

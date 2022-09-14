@@ -1,41 +1,60 @@
 public class Griffindor extends Hogwarts {
-    private String nobility;
-    private String honor;
-    private String bravery;
+    private int nobility;
+    private int honor;
+    private int bravery;
+
     public Griffindor(String name,
                       int doMagic,
                       int distanceOfTransgression,
-                      String nobility,
-                      String honor,
-                      String bravery) {
-        super(name,doMagic, distanceOfTransgression);
+                      int nobility,
+                      int honor,
+                      int bravery) {
+        super(name, doMagic, distanceOfTransgression);
+        if (nobility < 0 || nobility > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.nobility = nobility;
+        if (honor < 0 || honor > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.honor = honor;
+        if (bravery < 0 || bravery > 100) {
+            throw new IllegalArgumentException("Значение выходит за границы диапозона.");
+        }
         this.bravery = bravery;
 
     }
 
-    public String getNobility() {
+    public int getNobility() {
         return nobility;
     }
 
-    public void setNobility(String nobility) {
+    public void setNobility(int nobility) {
         this.nobility = nobility;
     }
 
-    public String getHonor() {
+    public int getHonor() {
         return honor;
     }
 
-    public void setHonor(String honor) {
+    public void setHonor(int honor) {
         this.honor = honor;
     }
 
-    public String getBravery() {
+    public int getBravery() {
         return bravery;
     }
 
-    public void setBravery(String bravery) {
+    public void setBravery(int bravery) {
         this.bravery = bravery;
+    }
+
+    @Override
+    public String toString() {
+        return "Griffindor{" +
+                "nobility=" + nobility +
+                ", honor=" + honor +
+                ", bravery=" + bravery +
+                "} " + super.toString();
     }
 }
