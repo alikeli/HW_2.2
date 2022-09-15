@@ -2,7 +2,8 @@ public class Hufflepuff extends Hogwarts {
     private int hardWork;
     private int loyalty;
     private int honesty;
-    public Hufflepuff(String name,int doMagic,
+
+    public Hufflepuff(String name, int doMagic,
                       int distanceOfTransgression,
                       int hardWork,
                       int loyalty,
@@ -46,12 +47,26 @@ public class Hufflepuff extends Hogwarts {
         this.honesty = honesty;
     }
 
+    private int abilities() {
+        return hardWork + loyalty + honesty;
+    }
+
+    public void studentsCompareHuffleouff(Hufflepuff hufflepuff) {
+        int abilityFirst = this.abilities();
+        int abilitySecond = hufflepuff.abilities();
+        if (abilityFirst == abilitySecond) {
+            System.out.printf("%s равен %s \n", getName(), hufflepuff.getName());
+        } else if ((abilityFirst > abilitySecond)) {
+            System.out.printf("%s лучше %s \n", hufflepuff.getName(), getName());
+        } else {
+            System.out.printf("%s лучше %s \n", getName(), hufflepuff.getName());
+        }
+
+
+    }
+
     @Override
     public String toString() {
-        return "Hufflepuff{" +
-                "hardWork=" + hardWork +
-                ", loyalty=" + loyalty +
-                ", honesty=" + honesty +
-                "} " + super.toString();
+        return super.toString() + "трудолюбие =" + hardWork + ", верность = " + loyalty + ", честность = " + honesty;
     }
 }

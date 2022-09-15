@@ -59,15 +59,25 @@ public class Slytherin  extends Hogwarts{
     public void setThirstForPower(int thirstForPower) {
         this.thirstForPower = thirstForPower;
     }
+    private int abilities() {
+        return trick + determination + ambition + resourcefulness + thirstForPower;
+    }
+    public void studentsCompareSlytherin(Slytherin slytherin) {
+        int abilityFirst = this.abilities();
+        int abilitySecond = slytherin.abilities();
+        if (abilityFirst == abilitySecond) {
+            System.out.printf("%s равен %s.%d равно %d \n", getName(), slytherin.getName(), abilityFirst,abilitySecond);
+        } else if ((abilityFirst > abilitySecond)) {
+            System.out.printf("%s лучше %s.%d лучше %d \n", slytherin.getName(), getName(), abilityFirst,abilitySecond);
+        } else {
+            System.out.printf("%s хуже %s.%d хуже %d \n", getName(), slytherin.getName(),abilityFirst, abilitySecond);
+        }
+
+
+    }
 
     @Override
     public String toString() {
-        return "Slytherin{" +
-                "trick=" + trick +
-                ", determination=" + determination +
-                ", ambition=" + ambition +
-                ", resourcefulness=" + resourcefulness +
-                ", thirstForPower=" + thirstForPower +
-                "} " + super.toString();
+        return super.toString() +"хитрость =" + trick +", решительность =" + determination +", амбициозность =" + ambition +", находчивость =" + resourcefulness +", жажда власти =" + thirstForPower + "} " + super.toString();
     }
 }
