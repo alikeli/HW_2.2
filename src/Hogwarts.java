@@ -58,7 +58,6 @@ public abstract class Hogwarts {
             System.out.printf("%s хуже  %s. %d меньше %d \n", getName(), hogwarts.getName(), abilityFirst, abilitySecond);
         }
     }
-
     @Override
     public String toString() {
         return  "Имя='" + name + '\'' + ", сила магии =" + doMagic + ", трансгрессия=" + distanceOfTransgression + ",";

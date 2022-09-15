@@ -62,7 +62,6 @@ public class Hufflepuff extends Hogwarts {
             System.out.printf("%s лучше %s \n", getName(), hufflepuff.getName());
         }
 
-
     }
 
     @Override

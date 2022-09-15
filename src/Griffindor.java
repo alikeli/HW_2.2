@@ -62,7 +62,6 @@ public class Griffindor extends Hogwarts {
             System.out.printf("%s хуже  %s.%d меньше %d \n", getName(), griffindor.getName(), abilityFirst, abilitySecond);
         }
 
-
     }
 
     @Override

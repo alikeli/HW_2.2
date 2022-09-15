@@ -73,7 +73,6 @@ public class Slytherin  extends Hogwarts{
             System.out.printf("%s хуже %s.%d хуже %d \n", getName(), slytherin.getName(),abilityFirst, abilitySecond);
         }
 
-
     }
 
     @Override

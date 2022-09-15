@@ -22,5 +22,4 @@ public abstract class Main {
         germiona.studentsCompareGriffindor(ron);
     }
 
-
 }

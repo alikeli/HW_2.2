@@ -70,7 +70,6 @@ public class Ravenclaw extends Hogwarts {
             System.out.printf("%s хуже %s.%d хуже %d \n", getName(), ravenclaw.getName());
         }
 
-
     }
 
     @Override
